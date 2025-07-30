@@ -1,0 +1,27 @@
+# Configurações Gerais do Pipeline
+pipeline_name: "AdvancedStarSchemaPipeline"
+log_level: "INFO"
+
+# Configurações do Spark
+spark:
+  master: "local[*]"
+  app_name: "AdvancedStarSchemaPipeline"
+
+# Configurações de Dados
+data:
+  url: "https://github.com/g-bolota/olist-dataset/raw/main/olist_ecommerce_dataset.zip"
+  source_path: "data/source"
+  output_path: "data/dimensional"
+  profiling_path: "data/profiling"
+
+# Configurações de Qualidade de Dados
+data_quality:
+  accepted_order_status:
+    - "delivered"
+    - "shipped"
+    - "canceled"
+    - "invoiced"
+    - "processing"
+    - "unavailable"
+    - "approved"
+    - "created"
